@@ -1,19 +1,18 @@
 public class SearchElement {
-    public static void main(String[] args) {
-        
+    public static void main(String args[]){
 
-        int arr[]= {43,23,12,55,41,2,9,17};
-
-
+        String a=null;
+        int n=9;
+        int arr[]= {1,2,3,8,9,22,17};
         for(int i=0; i<arr.length;i++){
-            if(arr[i]==55){
-                System.out.println("Element found at array index:["+i+"]");
+
+            if(arr[i]==n){
+                a=" exist";
                 break;
             }
-            else{
-                 System.out.println("Element not found at array index:["+i+"]");
-                
-            }
-        }
+            else {
+                a=" does not exist.";
+        }}
+        System.out.println("Element "+n+a);
     }
 }
