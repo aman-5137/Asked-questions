@@ -33,7 +33,7 @@ System.out.println("Interface C: "+o);
 class abc extends CheckInterface{
 
      void zxcv(){
-        System.out.println("Extended class");
+        System.out.println("Child Class");
     }
 }
 
