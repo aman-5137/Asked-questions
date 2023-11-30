@@ -31,7 +31,7 @@ public class ArrayMultiplication{
         }
 
 //       Check if the matrices are correct to multiply
-        int arrM[][] = new int[r1][c2];
+        int matMult[][] = new int[r1][c2];
         if(r2 != c1){
             System.out.println("Cannot multiply!! Correct the matrix");
         }else {
@@ -39,7 +39,7 @@ public class ArrayMultiplication{
             for (int i = 0; i < r1; i++) {
                 for (int j = 0; j < c2; j++) {
                     for (int k = 0; k < r2; k++) {
-                        arrM[i][j] += mat1[i][k] * mat2[k][j];
+                        matMult[i][j] += mat1[i][k] * mat2[k][j];
                     }
                 }
             }
@@ -49,7 +49,7 @@ public class ArrayMultiplication{
         System.out.println("\nMultiplication of array1 and array2 is: ");
         for(int i=0; i< r1;i++){
             for(int j=0; j<c2; j++){
-                System.out.print(arrM[i][j]+" ");
+                System.out.print(matMult[i][j]+" ");
             }
             System.out.println();
         }
