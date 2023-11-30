@@ -2,12 +2,12 @@ public class ArrayMultiplication{
     public static void main(String[] args) {
 
         int r1 =2, c1=2;
-        int arr1[][]={
+        int mat1[][]={
                 {1,2},
                 {3,4}
         };
         int r2=2, c2=2;
-        int arr2[][]={
+        int mat2[][]={
                 {1,1},
                 {1,1}
         };
@@ -16,7 +16,7 @@ public class ArrayMultiplication{
         System.out.println("Array 1 is: ");
         for(int i=0; i< r1;i++){
             for(int j=0; j<c1; j++){
-                System.out.print(arr1[i][j]+" ");
+                System.out.print(mat1[i][j]+" ");
             }
             System.out.println();
         }
@@ -25,7 +25,7 @@ public class ArrayMultiplication{
         System.out.println("\nArray 2 is: ");
         for(int i=0; i< r2;i++){
             for(int j=0; j<c2; j++){
-                System.out.print(arr2[i][j]+" ");
+                System.out.print(mat2[i][j]+" ");
             }
             System.out.println();
         }
@@ -39,7 +39,7 @@ public class ArrayMultiplication{
             for (int i = 0; i < r1; i++) {
                 for (int j = 0; j < c2; j++) {
                     for (int k = 0; k < r2; k++) {
-                        arrM[i][j] += arr1[i][k] * arr2[k][j];
+                        arrM[i][j] += mat1[i][k] * mat2[k][j];
                     }
                 }
             }
