@@ -1,40 +1,59 @@
-public class ArrayMultiplication {
-    public static void main(String args[]){
+public class ArrayMultiplication{
+    public static void main(String[] args) {
 
-            int[][] arr1=new int[][]{{1,2},{4,3},{5,6}};
-        int[][] arr2=new int[][]{{2,2,2},{6,6,6}};
+        int r1 =2, c1=2;
+        int arr1[][]={
+                {1,2},
+                {3,4}
+        };
+        int r2=2, c2=2;
+        int arr2[][]={
+                {1,1},
+                {1,1}
+        };
 
-//       Display marix one
-        int arrM[][]= new int[][]{{0,0,0},{0,0,0}};
-        for(int i =0; i<arr1.length; i++) {
-            System.out.println();
-            for (int j = 0; j < arr1[i].length; j++) {
-                System.out.print("  "+arr1[i][j]);
+//      To display array1
+        System.out.println("Array 1 is: ");
+        for(int i=0; i< r1;i++){
+            for(int j=0; j<c1; j++){
+                System.out.print(arr1[i][j]+" ");
             }
-        }
-//       Display matrix two
-        System.out.println("\n\n\n");
-        for(int i =0; i<arr2.length; i++) {
             System.out.println();
-            for (int j = 0; j < arr2[i].length; j++) {
-                System.out.print("  "+arr2[i][j]);
-            }
         }
-//    Multiplying both the arrays
-System.out.println("\n\n\n");
-        for(int i =0; i<arr1.length; i++){
-            for(int j=0; j<arr1[i].length;j++){
-                 arrM[i][j] = arr1[i][j]* arr2[i][j];
+
+//      To display array2
+        System.out.println("\nArray 2 is: ");
+        for(int i=0; i< r2;i++){
+            for(int j=0; j<c2; j++){
+                System.out.print(arr2[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+//       Check if the matrices are correct to multiply
+        int arrM[][] = new int[r1][c2];
+        if(r2 != c1){
+            System.out.println("Cannot multiply!! Correct the matrix");
+        }else {
+//        Multiplying both the arrays
+            for (int i = 0; i < r1; i++) {
+                for (int j = 0; j < c2; j++) {
+                    for (int k = 0; k < r2; k++) {
+                        arrM[i][j] += arr1[i][k] * arr2[k][j];
+                    }
                 }
             }
-//    Display the product of both matrices
-        for(int i =0; i<arr1.length; i++){
-            System.out.println();
-            for(int j=0; j<arr1[i].length;j++) {
-                    System.out.print("  "+arrM[i][j]);
-                }
+        }
+
+//      Display the product of both the matrices
+        System.out.println("\nMultiplication of array1 and array2 is: ");
+        for(int i=0; i< r1;i++){
+            for(int j=0; j<c2; j++){
+                System.out.print(arrM[i][j]+" ");
             }
+            System.out.println();
+        }
 
-
+        
     }
 }
