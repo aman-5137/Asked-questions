@@ -1,4 +1,4 @@
-public class ArrayMultiplication{
+public class MatrixMultiplication{
     public static void main(String[] args) {
 
         int r1 =2, c1=2;
@@ -12,8 +12,8 @@ public class ArrayMultiplication{
                 {1,1}
         };
 
-//      To display array1
-        System.out.println("Array 1 is: ");
+//      To display Matrix 1
+        System.out.println("Matrix  1 is: ");
         for(int i=0; i< r1;i++){
             for(int j=0; j<c1; j++){
                 System.out.print(mat1[i][j]+" ");
@@ -21,8 +21,8 @@ public class ArrayMultiplication{
             System.out.println();
         }
 
-//      To display array2
-        System.out.println("\nArray 2 is: ");
+//      To display Matrix 2
+        System.out.println("\nMatrix  2 is: ");
         for(int i=0; i< r2;i++){
             for(int j=0; j<c2; j++){
                 System.out.print(mat2[i][j]+" ");
@@ -35,7 +35,7 @@ public class ArrayMultiplication{
         if(r2 != c1){
             System.out.println("Cannot multiply!! Correct the matrix");
         }else {
-//        Multiplying both the arrays
+//        Multiplying both the Matrix s
             for (int i = 0; i < r1; i++) {
                 for (int j = 0; j < c2; j++) {
                     for (int k = 0; k < r2; k++) {
@@ -46,7 +46,7 @@ public class ArrayMultiplication{
         }
 
 //      Display the product of both the matrices
-        System.out.println("\nMultiplication of array1 and array2 is: ");
+        System.out.println("\nMultiplication of Matrix 1 and Matrix 2 is: ");
         for(int i=0; i< r1;i++){
             for(int j=0; j<c2; j++){
                 System.out.print(matMult[i][j]+" ");
