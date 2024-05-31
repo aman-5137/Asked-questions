@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 class prime{
 
     public static void main(String args[]){

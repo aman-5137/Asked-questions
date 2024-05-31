@@ -1,3 +1,9 @@
+//   1 2 3
+//   8 9 4
+//   7 6 5
+//  This how a spiral matrix looks like!
+
+
 import java.util.Scanner;
 
 public class SpiralMatrix {
